@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern SaaS Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom styles for carousel buttons */
+    .carousel-btn {
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+    }
+    /* Background for Hero Section */
+    .hero-bg {
+      background: url('Coding-After-Dark.jpg') center/cover no-repeat;
+    }
+
+    /* Gradient for Pricing Section */
+    .pricing-bg {
+      background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+    }
+
+    /* Subtle pattern for Contact Section */
+    .contact-bg {
+      background: url('https://www.transparenttextures.com/patterns/graphy.png');
+    }
+  </style>
+</head>
+<body class="bg-blue-400 text-gray-800">
+  <!-- Header Section -->
+  <header class="bg-white shadow-lg">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-xl font-bold">SaaSBrand</h1>
+      <nav class="space-x-6">
+        <a href="#features" class="text-gray-600 hover:text-blue-500">Features</a>
+        <a href="#testimonials" class="text-gray-600 hover:text-blue-500">Testimonials</a>
+        <a href="#pricing" class="text-gray-600 hover:text-blue-500">Pricing</a>
+        <a href="#contact" class="text-gray-600 hover:text-blue-500">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-bg text-white py-20">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-4">Welcome to SaaSBrand</h2>
+      <p class="text-lg mb-6">A modern platform to streamline your workflow and boost productivity.</p>
+      <a href="#pricing" class="bg-white text-blue-500 px-6 py-3 rounded-lg font-semibold">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-20">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-8">Features</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 bg-white shadow-md rounded-lg">
+          <img src="https://img.icons8.com/fluency/48/automation.png" alt="Automation Icon" class="mx-auto mb-4">
+          <h4 class="text-xl font-bold mb-2">Smart Automation</h4>
+          <p>Optimize your tasks with smart automation.</p>
+        </div>
+        <div class="p-6 bg-white shadow-md rounded-lg">
+          <img src="https://img.icons8.com/fluency/48/conference.png" alt="Collaboration Icon" class="mx-auto mb-4">
+          <h4 class="text-xl font-bold mb-2">Team Collaboration</h4>
+          <p>Collaborate with your team in real time.</p>
+        </div>
+        <div class="p-6 bg-white shadow-md rounded-lg">
+          <img src="https://img.icons8.com/fluency/48/combo-chart.png" alt="Analytics Icon" class="mx-auto mb-4">
+          <h4 class="text-xl font-bold mb-2">Advanced Analytics</h4>
+          <p>Access detailed analytics and insights.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="bg-gray-50 py-20">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-8">What Our Users Say</h3>
+      <div class="relative">
+        <div id="testimonial-carousel" class="space-y-8">
+          <div class="bg-white p-6 shadow-md rounded-lg">
+            <img src="https://via.placeholder.com/48" alt="Jane Doe" class="mx-auto rounded-full mb-4">
+            <p class="italic">"SaaSBrand has transformed the way I work. Highly recommend it!"</p>
+            <p class="mt-4 font-semibold">- Jane Doe</p>
+          </div>
+          <div class="bg-white p-6 shadow-md rounded-lg hidden">
+            <img src="https://via.placeholder.com/48" alt="John Smith" class="mx-auto rounded-full mb-4">
+            <p class="italic">"Simple, intuitive, and powerful. Exactly what I needed."</p>
+            <p class="mt-4 font-semibold">- John Smith</p>
+          </div>
+        </div>
+        <div class="flex justify-center mt-4 space-x-4">
+          <button id="prev-btn" class="carousel-btn">Prev</button>
+          <button id="next-btn" class="carousel-btn">Next</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-20">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-8">Pricing</h3>
+      <div class="flex flex-col md:flex-row justify-center gap-8">
+        <div class="p-6 bg-white shadow-md rounded-lg">
+          <h4 class="text-xl font-bold mb-4">Basic Plan</h4>
+          <p class="text-2xl font-semibold mb-4">$<span id="basic-price">9</span>/month</p>
+          <ul class="space-y-2 mb-4">
+            <li>✔ Essential features</li>
+            <li>✔ Email support</li>
+          </ul>
+          <button class="bg-blue-500 text-white px-6 py-3 rounded-lg">Choose Plan</button>
+        </div>
+        <div class="p-6 bg-white shadow-md rounded-lg">
+          <h4 class="text-xl font-bold mb-4">Pro Plan</h4>
+          <p class="text-2xl font-semibold mb-4">$<span id="pro-price">29</span>/month</p>
+          <ul class="space-y-2 mb-4">
+            <li>✔ All Basic features</li>
+            <li>✔ Priority support</li>
+            <li>✔ Advanced analytics</li>
+          </ul>
+          <button class="bg-blue-500 text-white px-6 py-3 rounded-lg">Choose Plan</button>
+        </div>
+      </div>
+      <div class="mt-8">
+        <label for="team-size" class="block font-semibold mb-2">Team Size:</label>
+        <input id="team-size" type="number" value="1" min="1" class="w-20 text-center border rounded-md">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-gray-800 text-white py-20">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-8">Get in Touch</h3>
+      <form class="max-w-lg mx-auto" id="contact-form">
+        <input type="text" placeholder="Your Name" class="w-full px-4 py-2 mb-4 rounded-lg" required>
+        <input type="email" placeholder="Your Email" class="w-full px-4 py-2 mb-4 rounded-lg" required>
+        <textarea placeholder="Your Message" class="w-full px-4 py-2 mb-4 rounded-lg" required></textarea>
+        <button class="bg-blue-500 px-6 py-3 rounded-lg font-semibold">Send Message</button>
+      </form>
+      <p id="form-success" class="hidden mt-4 text-green-500">Thank you for your message! We'll get back to you shortly.</p>
+    </div>
+  </section>
+
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Testimonial carousel functionality
+    const testimonials = document.querySelectorAll('#testimonial-carousel > div');
+    let currentTestimonial = 0;
+
+    document.getElementById('prev-btn').addEventListener('click', () => {
+      testimonials[currentTestimonial].classList.add('hidden');
+      currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+      testimonials[currentTestimonial].classList.remove('hidden');
+    });
+
+    document.getElementById('next-btn').addEventListener('click', () => {
+      testimonials[currentTestimonial].classList.add('hidden');
+      currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+      testimonials[currentTestimonial].classList.remove('hidden');
+    });
+
+    // Pricing calculator functionality
+    const teamSizeInput = document.getElementById('team-size');
+    const basicPrice = document.getElementById('basic-price');
+    const proPrice = document.getElementById('pro-price');
+
+    teamSizeInput.addEventListener('input', () => {
+      const teamSize = parseInt(teamSizeInput.value) || 1;
+      basicPrice.textContent = (9 * teamSize).toFixed(2);
+      proPrice.textContent = (29 * teamSize).toFixed(2);
+    });
+
+    // Contact form validation and success message
+    const contactForm = document.getElementById('contact-form');
+    const formSuccess = document.getElementById('form-success');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      formSuccess.classList.remove('hidden');
+      contactForm.reset();
+    });
+  </script>
+</body>
+</html>
